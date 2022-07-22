@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="flex.css">
+    <title>Flex</title>
+</head>
+<body>
+    <div class="container" id="container">
+
+    </div>
+    <div class="boxOptions">
+        <h3>Cantidad de cajas: </h3>
+        <button 
+            onClick="removeBox()"
+        >-</button>
+        <button 
+            onClick="addBox()"
+        >+</button>
+    </div>
+
+    <div class="flexOptions">
+        <div class="justify-content">
+            <b>justify-content</b>
+            <div>
+                <button onClick="applyJustify(event)">flex-start</button>
+                <button onClick="applyJustify(event)">center</button>
+                <button onClick="applyJustify(event)">flex-end</button>
+                <button onClick="applyJustify(event)">space-around</button>
+                <button onClick="applyJustify(event)">space-between</button>
+                <button onClick="applyJustify(event)">space-evenly</button>
+            </div>
+        </div>
+        <div class="align-items">
+            <b>align-items</b>
+            <div>
+                <button onClick="applyAlign(event)">flex-start</button>
+                <button onClick="applyAlign(event)">center</button>
+                <button onClick="applyAlign(event)">flex-end</button>
+            </div>
+        </div>
+        <div class="flex-direction">
+            <b>flex-direction</b>
+            <div>
+                <button onClick="applyDirection(event)">row</button>
+                <button onClick="applyDirection(event)">row-reverse</button>
+                <button onClick="applyDirection(event)">column</button>
+                <button onClick="applyDirection(event)">column-reverse</button>
+            </div>
+        </div>
+        <div class="gap">
+            <b>gap</b>
+            <div>
+                <input type="number" id="gap" min="0" onChange="applyGap(event)">
+            </div>
+        </div>
+        <div class="flex-wrap">
+            <b>flex-wrap</b>
+            <div>
+                <button onClick="applyWrap(event)">no-wrap</button>
+                <button onClick="applyWrap(event)">wrap</button>
+                <button onClick="applyWrap(event)">wrap-reverse</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
